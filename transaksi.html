@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>RZ - Grosir</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/1c.png">
+    <!-- Custom CSS -->
+    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+        integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link href="css/app.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav id="sidebar" class="sidebar js-sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">RZ - Grosir</span>
+          </a>
+
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">Pages</li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="bi bi-clipboard-data"></i><span class="hide-menu">Data Barang</span></a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="transaksi.html" aria-expanded="false"><i class="bi bi-credit-card"></i><span class="hide-menu">Transaksi</span></a>
+            </li>
+
+           
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="main">
+        <nav class="navbar navbar-expand navbar-light navbar-bg ">
+          
+
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item dropdown">
+                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                  <i class="align-middle" data-feather="settings"></i>
+                </a>
+
+                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                  <img src="img/avatars/2.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Rizal Jalaludin</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="content">
+          <div class="container-fluid p-0">
+          
+            <div class="page-breadcrumb">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 d-flex align-items-center">
+                      <li class="breadcrumb-item">
+                        <a href="/" class="link"> <i class="bi bi-credit-card"></i></a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Portal Transaksi</li>
+                    </ol>
+                  </nav>
+                  <h1 class="mb-0 fw-bold">Transaksi</h1>
+                  <!-- <h6 class="card-subtitle mt-2">Berikut merupakan semua barang yang tersedia</h6> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="page-wrapper">
+                      
+                  
+                      <div class="container-fluid">
+                        <div class="">
+                          <form onsubmit="return false">
+                            <table>
+                              <tr>
+                                <div class="col-lg-2">
+                                  <label>Nama Barang</label>
+                  
+                                  <select name="barang" id="barang" onchange="tampilkan_total()" width="100px">
+                                    <option value="Minyak">Minyak</option>
+                                    <option value="Gula">Gula</option></select
+                                  ><br />
+                                </div>
+                                <br />
+                                <div class="col-lg-1">
+                                  <label>Jenis </label>
+                                  <select name="jenis" id="jenis" onchange="tampilkan_total()">
+                                    <option value="Dus">Dus</option>
+                                    <option value="Satuan">Satuan</option></select
+                                  ><br />
+                                  <br />
+                                </div>
+                                <div class="col-lg-1">
+                                  <label>Jumlah</label>
+                                </div>
+                  
+                                <input type="number" id="jumlah" width="100px" value="0" onchange="tampilkan_total()" /><br />
+                                <br />
+                                <button type="submit" class="btn btn-primary text-White">Hitung</button>
+                              </tr>
+                            </table>
+                          </form>
+                          <br />
+                          <h1>Total : <span id="Total"></span></h1>
+                          <br />
+                          <form onsubmit="return false">
+                            <div class="col-lg-1">
+                              <label>Pembayaran:</label>
+                              <input type="number" id="bayar" onchange="tampilkan_bayar()" /><br />
+                              <br />
+                              <button type="submit" class="btn btn-primary text-White">Bayar</button>
+                            </div>
+                            <br />
+                          </form>
+                          <h1>Kembalian : <span id="kembalian"></span></h1>
+                          <script>
+                            function tampilkan_total() {
+                              var barang = document.getElementById("barang").value;
+                              var jenis = document.getElementById("jenis").value;
+                              var jumlah = document.getElementById("jumlah").value;
+                  
+                              if (barang == "Minyak") {
+                                if (jenis == "Dus") {
+                                  total = jumlah * 300000;
+                                } else if (jenis == "Satuan") {
+                                  total = jumlah * 15000;
+                                }
+                              } else if (barang == "Gula") {
+                                if (jenis == "Dus") {
+                                  total = jumlah * 250000;
+                                } else if (jenis == "Satuan") {
+                                  total = jumlah * 10000;
+                                }
+                              }
+                              document.getElementById("Total").innerHTML = total;
+                            }
+                  
+                            function tampilkan_bayar() {
+                              var bayar = document.getElementById("bayar").value;
+                              var kembalian = bayar - total;
+                              document.getElementById("kembalian").innerHTML = kembalian;
+                            }
+                          </script>
+                        </div>
+                      </div>
+                  
+                     
+                    </div>
+                  </div>
+                  <div class="card-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="col-6 text-start">
+                <p class="mb-0">
+                  <a class="text-muted" href="#" target="_blank"><strong>RZ - Grosir</strong></a> - <a class="text-muted" href="#" target="_blank"><strong>rizal Jalaludin</strong></a> &copy;
+                </p>
+              </div>
+              <div class="col-6 text-end"></div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="assets/js/register.js"></script>
+    <script src="service-worker.js"></script>
+  </body>
+</html>
